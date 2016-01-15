@@ -11,7 +11,7 @@ stop(Pid) ->
 
 loop(Fd, Pin) ->
   receive
-    on -> 
+    on ->
       file:write(Fd, "1"),
       loop(Fd, Pin);
     off ->
@@ -29,4 +29,3 @@ loop(Fd, Pin) ->
       gpio:release(Pin),
       ok
   end.
-

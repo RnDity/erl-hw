@@ -37,4 +37,3 @@ start_test(R1Size, R2Size, R3Size, R4Size) ->
     led:stop(Led2),
     led:stop(Led3),
     led:stop(Led4).
-
