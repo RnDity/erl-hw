@@ -35,10 +35,3 @@ connect(InitialRelay, [LastRelay], next) ->
 connect(InitialRelay, [FirstRelay,NextRelay|Ring], next) ->
     FirstRelay ! {connect, NextRelay},
     connect(InitialRelay, [NextRelay|Ring], next).
-
-
-
-    
-
-    
-    

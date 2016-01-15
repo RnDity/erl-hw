@@ -17,7 +17,7 @@ create(RingSize, RelayLimit, Led, TestPid) ->
     spawn(relay, relay, [disconnected, RingSize, RelayLimit, Led, TestPid]).
 
 %%------------------------------------------------------------------------------
-%% When a relay is initially spawned, it is in a disconnected state. The 
+%% When a relay is initially spawned, it is in a disconnected state. The
 %% first parameter in the following function reflects this. Relays start off
 %% this way so that we may connect two processes together which mutually depend
 %% on one another. In this case, the last relay in the ring must be connected
@@ -33,7 +33,7 @@ relay(disconnected, RingSize, RelayLimit, Led, TestPid) ->
 
 %%------------------------------------------------------------------------------
 %% The connected relay must be parameterized with the following parameters:
-%% * RingSize - In order to calculate when the token has completed a full 
+%% * RingSize - In order to calculate when the token has completed a full
 %% revolution.
 %% * RelayLimit - To stop the token from being passed around the ring.
 %% * Led - The led file descriptor is required in order to communicate to the
